@@ -1,0 +1,8 @@
+¿Has logrado eliminar los warnings “SimplifyBooleanReturns: This if statement can bereplaced by `return {condition};” y “ForLoopCanBeForeach:This for loop can be replaced by
+a foreach loop”? ¿Por qué crees que han desaparecido?
+
+-Si, lo he conseguido arreglar, y para que desaparezcan:
+
+-Para arreglar el “SimplifyBooleanReturns: This if statement can bereplaced by `return {condition};”, en vez de utilizar un if para comprobar si una condicion es verdadera o falsa
+ y devolver verdadero o falso en funcion del if, he retornado directamente la comprobacion, que te da true o false directamente (pej: return a == b)
+-Para arreglar el “ForLoopCanBeForeach: This for loop can be replaced by a foreach loop”, cambié el bucle for tradicional, que usa un índice para recorrer los elementos, por un foreach         que permite ir directamente a cada elemento de la colección sin usar índices (pej: for(String fruta : frutas){System.out.println(fruta);}).
